@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="EmeMangement" Class="DataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=SHARMA-VAIO\SONY;Initial Catalog=EmeMangement;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="EmeMangementConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.studentdataupload" Member="studentdatauploads">
+    <Type Name="studentdataupload">
+      <Column Name="fId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="fName" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="iTechId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="fPath" Type="System.String" DbType="VarChar(450) NOT NULL" CanBeNull="false" />
+      <Column Name="fDate" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TechList" Member="TechLists">
+    <Type Name="TechList">
+      <Column Name="iTechId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="sTechnology" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AdminTable" Member="AdminTables">
+    <Type Name="AdminTable">
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="password" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="EmpPass" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="EmailPass" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.StuTable" Member="StuTables">
+    <Type Name="StuTable">
+      <Column Name="iSNo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="sSID" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="sPassword" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="sName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="sMobile" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="sCollege" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="sUniversity" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="sRegistrationDate" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="sValidity" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="sEmailId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="sImagePath" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="sGender" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="sAlternateMobile" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="sAlternameEmail" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="sPHouseNo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="sPStreet" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="sPState" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="sPcity" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="sPVillage" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="sPpincode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="sRhouseno" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="sRStreet" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="sRState" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="sRCity" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="sRVillage" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="sRpincode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="sDob" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="cBranch" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="nCourse" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="sStatus" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="sComment" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.StuTech" Member="StuTeches">
+    <Type Name="StuTech">
+      <Column Name="sSID" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="iTechId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="iGroupId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="iBid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
